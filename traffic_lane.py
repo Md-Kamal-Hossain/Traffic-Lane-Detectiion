@@ -68,18 +68,7 @@ def region_of_interest(image):
     #6 finding lane line --bitwise
     masked_image = cv2.bitwise_and(image,mask)
     return masked_image
-#image = cv2.imread('california-highway.jpeg')
-#lane_image = np.copy(image)
-#canny_image = canny(lane_image)
-#cropped_image = region_of_interest(canny_image)
-#lines = cv2.HoughLinesP(cropped_image,2,np.pi/180,100,np.array([]),minLineLength = 40,maxLineGap = 5)
-#averaged_lines = average_slope_intercept(lane_image,lines)
-##lines = cv2.HoughLinesP(edges, 1, np.pi/180, threshold, 0, minLineLength, 20);
-#line_image = display_lines(lane_image,averaged_lines)
-##finding lane line ------region of interest
-#combo_image = cv2.addWeighted(lane_image,0.8,line_image,1,1)
-#cv2.imshow('result',combo_image)
-#cv2.waitKey(0)
+
 
 cap = cv2.VideoCapture("test2.mp4")
 while(cap.isOpened()):
